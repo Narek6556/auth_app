@@ -1,4 +1,5 @@
 import 'package:auth_app/data/service_locator.dart';
+import 'package:auth_app/extensions/extension_on_num.dart';
 import 'package:auth_app/ui/constants/app_colors.dart';
 import 'package:auth_app/ui/constants/app_texts.dart';
 import 'package:auth_app/ui/stores/auth_store/auth.store.dart';
@@ -49,13 +50,13 @@ class _FormSectionState extends State<FormSection>
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 24,
+      padding: EdgeInsets.symmetric(
+        horizontal: 24.w(context),
       ),
       child: Column(
         children: [
           SizedBox(
-            height: 162,
+            height: 162.h(context),
             child: Observer(
               builder: (_) {
                 return AnimatedSwitcher(
@@ -78,7 +79,7 @@ class _FormSectionState extends State<FormSection>
                   child: authStore.isLoginSelected
                       ? Column(
                           key: ValueKey('login'),
-                          spacing: 12,
+                          spacing: 12.h(context),
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Input(
@@ -103,7 +104,7 @@ class _FormSectionState extends State<FormSection>
                         )
                       : Column(
                           key: ValueKey('sign-up'),
-                          spacing: 12,
+                          spacing: 12.h(context),
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Input(
@@ -140,7 +141,7 @@ class _FormSectionState extends State<FormSection>
             ),
           ),
           SizedBox(
-            height: 32,
+            height: 32.h(context),
           ),
           Observer(
             builder: (_) {
@@ -166,7 +167,7 @@ class _FormSectionState extends State<FormSection>
             },
           ),
           SizedBox(
-            height: 52,
+            height: 52.h(context),
             child: Observer(
               builder: (_) {
                 return authStore.errorMessage.isNotEmpty

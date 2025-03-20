@@ -1,4 +1,5 @@
 import 'package:auth_app/data/service_locator.dart';
+import 'package:auth_app/extensions/extension_on_num.dart';
 import 'package:auth_app/extensions/extension_on_object.dart';
 import 'package:auth_app/ui/constants/app_colors.dart';
 import 'package:auth_app/ui/pages/auth/widgets/form_section.dart';
@@ -125,7 +126,7 @@ class _AuthPageState extends State<AuthPage> {
             children: [
               HeroSection(),
               SizedBox(
-                height: 92,
+                height: 92.h(context),
               ),
               FormSection(),
             ],

@@ -1,3 +1,4 @@
+import 'package:auth_app/extensions/extension_on_num.dart';
 import 'package:auth_app/ui/constants/app_assets.dart';
 import 'package:auth_app/ui/constants/app_colors.dart';
 import 'package:auth_app/ui/constants/app_texts.dart';
@@ -47,9 +48,9 @@ class Toaster extends StatelessWidget {
           color: backgroundColor,
           borderRadius: BorderRadius.circular(20),
         ),
-        padding: const EdgeInsets.symmetric(
-          vertical: 12,
-          horizontal: 12,
+        padding: EdgeInsets.symmetric(
+          vertical: 12.w(context),
+          horizontal: 12.w(context),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
